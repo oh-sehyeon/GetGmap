@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+
+	<title>Buscar CEP</title>
+	
+	<link rel="stylesheet" type="text/css" href="./CSS/reset.css">
+	<link rel="stylesheet" type="text/css" href="./CSS/style.css">
+	<link rel="stylesheet" type="text/css" href="./CSS/font.css">
+
+</head>
+
+<body>
+<nav id="navigationbar">
+	<div class="home-button">
+		<a href="#">Buscar cep</a>
+	</div>
+
+	<div class="menu-area">
+		<ul class="menu">
+			<li class="menu-item"><a href="#">CSS</a></li>
+			<li class="menu-item"><a href="#">Componentes</a></li>
+			<li class="menu-item"><a href="#">Javascript</a></li>
+			<li class="menu-item"><a href="#">HTML</a></li>
+		</ul>
+	</div>
+</nav>
+<main>
+	<section class="cep-information-area">
+		<span class="cep-information-area-title">digite um cep</span>
+		<p>Digite abaixo para consultar um Código de Endereçamento Postal (CEP) do Brasil</p>
+
+		<div class="cep-form">
+			<input type="text" name="cep" maxlength="8" class="input"  onkeypress='return onlyNum(event)' data-mask="00000-000" onfocus="this.value='';" required>
+			<label for="cep" class="label-name">
+				<span class="cep-form-name">Cep</span>
+			</label>
+		</div>
+
+		<button type="submit" id="buscar-button">Buscar</button>
+	</section>
+
+	<section class="map-section">
+			<div class="map-address-box">
+
+				<button class="x-button" id="">X</button>
+
+				<div class="address-content-area">
+					<div class="address-area">
+						<ul class="address-details">
+							<li id="logradouro"></li>
+							<li id="bairro"></li>
+							<li id="localidade"></li>
+							<li id="cep"></li>
+						</ul>
+					</div>
+
+					<div class="google-map"></div>
+
+					<button class="redo-button" id="redo-button">Fazer outra busca</button>
+				</div>
+			</div>
+	</section>
+</main>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script async defer type="text/javascript" src="./JS/showAddressAndGmap.js"></script>
+	<script async defer type="text/javascript" src="./JS/btnFunctions.js"></script>
+	<script async defer type="text/javascript" src="./JS/sitecontrol.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkUqC6E4iJeYmxZgGaweeKEfUfA25ZLME"></script>
+    <script async defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+</body>
+</html>

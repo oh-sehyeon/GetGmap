@@ -1,0 +1,37 @@
+@font-face {
+	font-family: "metropolis-black-webfont";
+	src: url("../assets/fonts/metropolis-black-webfont.woff") format("woff"),
+	     url("../assets/fonts/metropolis-black-webfont.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "metropolis-light-webfont";
+	src: url("../assets/fonts/metropolis-light-webfont.woff") format("woff"),
+	     url("../assets/fonts/metropolis-light-webfont.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "metropolis-regular-webfont";
+	src: url("../assets/fonts/metropolis-regular-webfont.woff") format("woff"),
+	     url("../assets/fonts/metropolis-regular-webfont.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: 'Raleway-Black';
+	src: url('../assets/fonts/Raleway-Black.ttf')  format('truetype');/* Safari, Android, iOS */
+}
+
+@font-face {
+	font-family: 'Raleway-Bold';
+	src: url('../assets/fonts/Raleway-Bold.ttf')  format('truetype');/* Safari, Android, iOS */
+}
+
+@font-face {
+	font-family: 'Raleway-Medium';
+	src: url('../assets/fonts/Raleway-Medium.ttf')  format('truetype');/* Safari, Android, iOS */
+}
+
+@font-face {
+	font-family: 'Raleway-Regular';
+	src: url('../assets/fonts/Raleway-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+}

@@ -1,0 +1,462 @@
+body
+{
+	font-family: 'Raleway-Black','Raleway-Bold', 'metropolis-black-webfont', 'Raleway-Regular', 'Raleway-Medium', sans-serif;
+}
+
+/* ---Navigation Bar Area Start--- */
+/* Desktop Version Start */
+#navigationbar
+{
+	height: 7vh;
+	padding: 0 5%;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	border-bottom: 2px solid #CCCCCC
+}
+
+.home-button a
+{
+	text-decoration: none;
+	font-weight: bold;
+	color: red;
+	font-size: 1.3rem;
+}
+
+.menu-area
+{
+	margin-left: 10px;
+}
+
+.menu
+{
+	position: relative;
+	display: flex;
+	flex-direction: row;
+}
+
+.menu-item 
+{
+	margin: 15px;
+	font-size: 0.8rem;
+	font-weight: bold;
+}
+
+.menu-item a
+{
+	text-decoration: none;
+	color: red;
+
+}
+/* Desktop Version End */
+/* Mobile Version Start */
+@media (max-width: 1024px)
+{
+
+	#navigationbar
+	{	
+		padding: 0;
+		width: 100%;
+		height: 60px;
+		position: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.home-button
+	{
+		position: relative;
+		top: 10px;
+	}
+
+	.home-button a
+	{
+		font-size: 1rem;
+	}
+
+	.menu-area
+	{
+		margin: 5px 0;
+		width: 90%;
+	}
+
+	.menu
+	{
+		width: 100%;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	.menu-item
+	{
+		font-size: 0.7rem;
+	}
+}
+/* Mobile Version End */
+/* ---Navigation Bar Area End--- */
+
+/* ---Main Area Start --- */
+/* Desktop CEP Area Start */
+main
+{
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	height: 93vh;
+}
+
+.cep-information-area
+{
+	width: 35%;
+	padding: 0 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.cep-information-area .cep-information-area-title
+{
+	font-size: 2rem;
+	font-weight: bold;
+	color: red;
+	margin: 5px 0;
+}
+
+.cep-information-area p
+{
+	margin-top: 5px;
+	font-family: 'Raleway-Regular', 'metropolis-regular-webfont', sans-serif;
+	font-size: 0.9rem;
+	color: #AAAAAA;
+}
+
+.cep-form
+{
+	margin-top: 20px;
+	width: 100%;
+	position: relative;
+	height: 50px;
+	overflow: hidden;
+}
+
+.cep-form input
+{
+	width: 100%;
+	height: 100%;
+	padding-top: 4px;
+	padding-left: 10px;
+	border: none;
+	outline: none;
+	color: #ABABAB;
+	font-size: 1.3rem;
+	font-family: 'Raleway-Regular', 'metropolis-regular-webfont', sans-serif;
+}
+
+.cep-form .label-name
+{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	border-bottom: 2px solid #ABABAB;
+}
+
+.cep-form .label-name::after
+{
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	border-bottom: 2px solid red;
+	left: 0px;
+	bottom: -2px;
+	transform: translateX(-100%);
+	transition: transform 0.3s ease;
+}
+
+.cep-form-name
+{
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	transition: all 0.3s ease;
+	color: #DDDDDD;
+	font-size: 1.1rem;
+	font-family: 'Raleway-Regular', 'metropolis-regular-webfont', sans-serif;;
+}
+
+
+.cep-form input:focus + .label-name .cep-form-name, 
+.cep-form input:valid + .label-name .cep-form-name
+{
+	transform: translateY(-150%);
+	font-size: 0.8rem;
+	color: red;
+}
+
+.cep-form input:focus + .label-name::after,
+.cep-form input:valid + .label-name::after
+{
+	transform: translateX(0%);
+}
+
+#buscar-button
+{
+	position: relative;
+	margin-top: 30px;
+	background: red;
+	color: #EDEDED;
+	height: 40px;
+	width: 70%;
+	border-radius: 18px;
+	font-size: 1.1rem;
+	font-family: 'Raleway-Regular', 'metropolis-regular-webfont', sans-serif;;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+#buscar-button:hover
+{
+	background: #CCCCCC;
+	transition: all 0.2s ease;
+}
+
+#DISABLED_buscar-button
+{
+	position: relative;
+	margin-top: 30px;
+	background: red;
+	background: #CCCCCC;
+	height: 40px;
+	width: 70%;
+	color: #EDEDED;
+	border-radius: 18px;
+	font-size: 1.1rem;
+	font-family: 'Raleway-Regular', 'metropolis-regular-webfont', sans-serif;;
+	border: none;
+	outline: none;
+	pointer-events: none;
+}
+
+/* Desktop CEP Area End */
+/* Mobile CEP Area Start */
+@media (max-width:1024px)
+{
+	main
+	{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.cep-information-area
+	{
+		margin-top: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		padding: 0;
+	}
+
+	.cep-information-area p
+	{
+		padding: 0 50px;
+		text-align: center;
+		font-size: 1rem;
+	}
+
+	.cep-form
+	{
+		width: 50%;
+	}
+
+	#buscar-button
+	{
+		width: 55%;
+	}
+}
+/* Mobile CEP Area End */
+/*Destop Map Area Start */
+.map-section
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	background: red;
+}
+
+.map-address-box
+{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	top: 35px;
+	width: 85%;
+	height: 85%;
+	background: white;
+}
+
+.x-button
+{
+	display: none;
+}
+
+#x-button
+{
+	display: block;
+	font-family: 'Raleway-Bold', 'metropolis-black-webfont', 'Raleway-Medium', sans-serif;
+	font-size: 1.3rem;
+	position: absolute;
+	top: 15px;
+	right: 20px;
+	color: #999999;
+	background: white;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.address-content-area
+{
+	height: 70%;
+	width: 65%;
+	background: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.address-area
+{
+	height: 20%;
+}
+
+.address-area ul
+{
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+
+#logradouro
+{
+	color: red;
+	font-size: 2rem;
+	margin-bottom: 8px;
+}
+
+#bairro, #localidade, #cep
+{
+	font-family: 'Raleway-Regular', 'metropolis-black-webfont', 'Raleway-Medium', sans-serif;
+	font-size: 1.1rem;
+	color: #666666;
+	margin-top: 5px;
+}
+
+
+#google-map
+{	
+	margin-top: 30px;
+	width: 100%;
+	height: 65%;
+}
+
+.redo-button
+{	
+	margin-top: 30px; 
+	position: relative;
+	background: red;
+	color: #EDEDED;
+	height: 40px;
+	width: 40%;
+	border-radius: 18px;
+	font-size: 1.1rem;
+	font-family: 'Raleway-Regular', 'metropolis-black-webfont', 'Raleway-Medium', sans-serif;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.redo-button:hover
+{
+	background: #CCCCCC;
+	transition: all 0.2s ease;
+}
+
+#redo-button
+{
+	display: none;
+}
+/* Desktop Map Area End */
+/* Mobile Map Area Start */
+@media (max-width: 1024px)
+{
+	.map-section
+	{
+		margin-top: 50px;
+		width: 100%;
+		height: 600px;
+		align-items: center;
+	}
+
+	.map-address-box
+	{
+		top: 0;
+		width: 85%;
+		height: 90%;
+		background: white;
+	}
+
+	.address-content-area
+	{	
+		justify-content: space-between;
+		align-items: center;
+		height: 90%;
+		width: 90%;
+
+	}
+
+	.address-area
+	{
+		height: 80px;
+	}
+
+	.address-details
+	{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#google-map
+	{
+		height: 70%;
+	}
+
+	#x-button
+	{
+		top: 0px;
+		right: 0px;
+	}
+	.redo-button
+	{	
+		margin-top: 10px;
+		font-size: 0.9rem;
+	}
+
+}
+/* Mobile Map Area End */
+/* ---Main Area End --- */
